@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #eef6f7;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.title {
+  margin-bottom: 30px;
+  color: #333;
+  animation: fadeDown 1s ease forwards;
+}
+
+/* INFOGRAPHIC */
+.infographic {
+  width: 520px;
+  height: 520px;
+  margin: auto;
+  position: relative;
+  animation: rotateIn 1.2s ease forwards;
+}
+
+/* CENTER IDEA */
+.center {
+  width: 150px;
+  height: 150px;
+  background: #ffcc00;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+.center p {
+  font-size: 14px;
+}
+
+/* STEPS */
+.step {
+  width: 150px;
+  height: 85px;
+  position: absolute;
+  color: #fff;
+  padding: 12px;
+  border-radius: 14px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.step h2 {
+  font-size: 22px;
+}
+
+.step p {
+  font-size: 13px;
+}
+
+/* POSITIONS + COLORS */
+.s1 { top: 0; left: 185px; background: #2ec4b6; animation-delay: 0.3s; }
+.s2 { top: 85px; right: 0; background: #48bfe3; animation-delay: 0.6s; }
+.s3 { bottom: 85px; right: 0; background: #4361ee; animation-delay: 0.9s; }
+.s4 { bottom: 0; left: 185px; background: #7209b7; animation-delay: 1.2s; }
+.s5 { bottom: 85px; left: 0; background: #f72585; animation-delay: 1.5s; }
+.s6 { top: 85px; left: 0; background: #ff8800; animation-delay: 1.8s; }
+
+/* FOOTER */
+.footer {
+  margin-top: 30px;
+  color: #555;
+  font-size: 14px;
+  animation: fadeUp 2s ease forwards;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.05); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .infographic {
+    transform: scale(0.8);
+  }
+}
